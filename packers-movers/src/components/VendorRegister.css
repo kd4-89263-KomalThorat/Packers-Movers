@@ -1,0 +1,65 @@
+
+
+.vendor-register-container {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.vendor-register-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.vendor-register-card h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #ddd;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.register-btn {
+  background-color: #6c5ce7;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #a29bfe;
+}
