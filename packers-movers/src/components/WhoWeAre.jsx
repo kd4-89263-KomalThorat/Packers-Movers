@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import WhoWeAreImg from "../images/ourpurpose.png";
+import WhoWeAreImg from "../assets/ourpurpose.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
