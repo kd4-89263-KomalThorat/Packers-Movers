@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import PaymentComponent from "./PaymentComponent";
+import PaymentComponent from "../components/PaymentComponent";
 import "../styles/invoice.css";
 
 const Invoice = () => {

@@ -10,10 +10,10 @@ export default function WhoWeAre() {
   return (
     <div className="whoweare_container">
       <div className="whoweare_content">
-        <h1 data-aos="fade-in" data-aos-duration="1000">
+        <h1>
           Who We Are?
         </h1>
-        <p data-aos="fade-in" data-aos-duration="2000">
+        <p>
           Who We Are We are a trusted and innovative platform that connects
           individuals and businesses with reliable packing and moving service
           providers. Our mission is to simplify the relocation process by
@@ -26,8 +26,8 @@ export default function WhoWeAre() {
         <p>MAKE IN INDIA</p>
         <div
           className="know_more_btn"
-          data-aos="fade-in"
-          data-aos-duration="1000"
+          // data-aos="fade-in"
+          // data-aos-duration="1000"
         >
           <Link to="/contact">Know More</Link>
         </div>
@@ -35,8 +35,8 @@ export default function WhoWeAre() {
 
       <div
         className="whoweare_image"
-        data-aos="fade-in"
-        data-aos-duration="1000"
+        // data-aos="fade-in"
+        // data-aos-duration="1000"
       >
         <img src={WhoWeAreImg} alt="FantasyFoundationImg" />
       </div>

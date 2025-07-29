@@ -9,23 +9,23 @@ export default function WhyChooseUs() {
     <div className="mission">
       <div
         className="content_heading"
-        data-aos="fade-in"
-        data-aos-duration="1000"
+        // data-aos="fade-in"
+        // data-aos-duration="1000"
       >
         <h3>OUR PURPOSE</h3>
       </div>
       <div className="mission_content">
         <div
           className="mission_img"
-          data-aos="fade-in"
-          data-aos-duration="1000"
+          // data-aos="fade-in"
+          // data-aos-duration="1000"
         >
           <img src={OurPurposeImg} alt="MissionImg" />
         </div>
         <div
           className="mission_text"
-          data-aos="fade-in"
-          data-aos-duration="1000"
+          // data-aos="fade-in"
+          // data-aos-duration="1000"
         >
           <p>
             Our purpose is to revolutionize the relocation experience by
