@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signin } from "../Services/userService";
-import { vendorSignin } from "../Services/vendorService";
+
 import { toast } from "react-toastify";
 
 import "../styles/login.css";
@@ -47,23 +46,23 @@ const LoginForm = () => {
     }
 
     try {
-      // Attempt User Login
+      
       const userResponse = await signin(formData.email, formData.password);
       console.log("User Response:", userResponse);
 
       if (userResponse && userResponse.id) {
-        // ✅ Successful User Login
+    
         toast.success("Login successful as Customer!");
         sessionStorage.setItem("userName", userResponse.fullName);
         localStorage.setItem("userId", userResponse.id);
         navigate("/getquote");
-        return; // Exit function if user login is successful
+        return;
       }
     } catch (error) {
       console.log("User login failed, trying vendor login...");
     }
 
-    // If User login fails, try Vendor login
+  
     try {
       const vendorResponse = await vendorSignin(
         formData.email,
@@ -72,12 +71,12 @@ const LoginForm = () => {
       console.log("Vendor Response:", vendorResponse);
 
       if (vendorResponse && vendorResponse.id) {
-        // ✅ Successful Vendor Login
+        
         toast.success("Login successful as Vendor!");
         sessionStorage.setItem("vendorName", vendorResponse.bussinessName);
         localStorage.setItem("vendorId", vendorResponse.id);
         navigate("/vendor-Service-request");
-        return; // Exit function if vendor login is successful
+        return; 
       } else {
         toast.error("Invalid credentials.");
       }
