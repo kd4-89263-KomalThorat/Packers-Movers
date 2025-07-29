@@ -5,15 +5,14 @@ import Footer from "../components/Footer";
 
 
 import Headerh from "../components/Headerh";
+import ContactInfo from "../components/ContactInfo";
 
 
 export default function RegisterPage() {
   return (
     <div className="register_page">
       <Headerh />
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <UserRegisterForm />
-      </div>
+      <ContactInfo/>
       <Footer />
     </div>
   );
