@@ -468,15 +468,14 @@ html {
 
 /* ======================== About - Start ======================== */
 
-.mission {
+/* .mission {
   width: 100%;
   padding: 2vmin 15vmin 15vmin 15vmin;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
-  background-color: #fffbf5;
-  /* border: 1px solid red; */
+  background-color: #fbfaf9;
 }
 
 .mission .content_heading h3 {
@@ -486,8 +485,6 @@ html {
   letter-spacing: 1px;
   padding-bottom: 2vmin;
   margin: 4vmin 0 2vmin 0;
-  /* border-bottom: 1vmin solid #cbcbcb; */
-  /* text-transform: uppercase; */
   text-align: left;
 }
 
@@ -500,7 +497,6 @@ html {
 
 .mission .mission_img img {
   width: 22vw;
-  /* border: 2px solid var(--secondary); */
   border-radius: 5px;
 }
 
@@ -516,7 +512,7 @@ html {
 .mission .mission_text span {
   font-size: 3.2vmin;
   font-weight: 700;
-}
+} */
 
 .vision {
   width: 100%;
@@ -568,7 +564,7 @@ html {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
   .mission {
     padding: 2vmin 7vmin 15vmin 7vmin;
   }
@@ -614,7 +610,7 @@ html {
     margin: 8vmin 0 4vmin 0;
     font-size: 3.5vmin;
   }
-}
+} */
 
 /* ======================== About - End ======================== */
 
@@ -2392,4 +2388,43 @@ html {
 
 .search-button:hover {
   background-color: #0056b3;
+}
+
+
+/* WhyCooseUs css */
+.mission {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content_heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mission_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.mission_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission_img {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mission_text {
+  flex: 2;
+  min-width: 300px;
+  font-size: 1rem;
+  line-height: 1.7;
 }

@@ -54,11 +54,11 @@ export default function ContactInfo() {
           </p>
 
           <p>
-            <i class="ri-phone-fill"></i> +91 9970792572
+            <i className="ri-phone-fill"></i> +91 9970792572
           </p>
 
           <p>
-            <i class="ri-mail-fill"></i> packersandmovers@sunbeaminfo.com
+            <i className="ri-mail-fill"></i> packersandmovers@sunbeaminfo.com
           </p>
         </div>
       </div>

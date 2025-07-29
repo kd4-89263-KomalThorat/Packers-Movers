@@ -1,0 +1,36 @@
+.mission {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content_heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mission_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.mission_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission_img {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mission_text {
+  flex: 2;
+  min-width: 300px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
