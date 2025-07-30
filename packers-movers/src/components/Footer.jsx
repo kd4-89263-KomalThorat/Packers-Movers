@@ -23,7 +23,7 @@ function Footer() {
             </a>
           </p>
           <p>
-            <i className="ri-phone-fill"></i> +91 9970792572
+            <i className="ri-phone-fill"></i> +91 9356880893
           </p>
         </div>
       </div>
@@ -31,7 +31,7 @@ function Footer() {
       <div className="main_footer">
         <p>
           <span id="currentYear"></span>
-          Copyright &#169; 2024 | <Link to="/"> Packers And Movers </Link> | All
+          Copyright &#169; 2025 | <Link to="/"> Packers And Movers </Link> | All
           Rights Reserved.
         </p>
       </div>
