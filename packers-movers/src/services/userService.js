@@ -1,9 +1,11 @@
 import axios from "axios";
 import { createUrl } from "../utils";
+// import { config } from './config';
 
+const config = "http://localhost:8080";
 export async function createUser(userData) {
   try {
-    const url = createUrl("users/signup");
+    const url = createUrl(`${config}/users/signup`);
     const response = await axios.post(url, userData, {
       headers: { "Content-Type": "application/json" },
     });
@@ -22,8 +24,8 @@ export async function createUser(userData) {
 export async function signin(email, password) {
   try {
     const body = { email, password };
-    const url = createUrl("users/signin");
-    const response = await axios.post(url, body);
+    // const url = createUrl(`${config}/users/signin`);
+    const response = await axios.post(`${config}/users/signin`, body);
     return response.data;
   } catch (ex) {
     return {

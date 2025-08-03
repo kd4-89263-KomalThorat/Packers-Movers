@@ -1,6 +1,9 @@
  import axios from "axios";
 import { createUrl } from "../utils";
 
+
+const config = "http://localhost:8080";
+
 export async function registerVendor(vendorData) {
   try {
     const url = createUrl("Vendor");
@@ -33,7 +36,7 @@ export async function registerVendor(vendorData) {
 export async function vendorSignin(email, password) {
   try {
     const body = { email, password };
-    const url = createUrl("Vendor/signin");
+    const url = createUrl(`${config}/Vendor/signin`);
     const response = await axios.post(url, body);
     return response.data;
   } catch (ex) {
