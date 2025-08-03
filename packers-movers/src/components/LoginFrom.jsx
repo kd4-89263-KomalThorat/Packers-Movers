@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signin } from "../Services/userService";
-import { vendorSignin } from "../Services/vendorService";
+import { signin } from "../services/userService";
+import { vendorSignin } from "../services/vendorService";
 import { toast } from "react-toastify";
-
-import "../styles/login.css";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -88,7 +86,6 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="login-page-wrapper">
     <div className="form-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
@@ -121,11 +118,11 @@ const LoginForm = () => {
         <button type="submit">Login</button>
       </form>
     </div>
-    </div>
   );
 };
 
 export default LoginForm;
+
 
 
 // import React, { useState } from "react";
@@ -236,5 +233,4 @@ export default LoginForm;
 // };
 
 // export default LoginForm;
-
 
