@@ -52,7 +52,7 @@ const LoginForm = () => {
       console.log("User Response:", userResponse);
 
       if (userResponse && userResponse.id) {
-        // ✅ Successful User Login
+        //  Successful User Login
         toast.success("Login successful as Customer!");
         sessionStorage.setItem("userName", userResponse.fullName);
         localStorage.setItem("userId", userResponse.id);
@@ -72,7 +72,7 @@ const LoginForm = () => {
       console.log("Vendor Response:", vendorResponse);
 
       if (vendorResponse && vendorResponse.id) {
-        // ✅ Successful Vendor Login
+        //  Successful Vendor Login
         toast.success("Login successful as Vendor!");
         sessionStorage.setItem("vendorName", vendorResponse.bussinessName);
         localStorage.setItem("vendorId", vendorResponse.id);
