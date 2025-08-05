@@ -66,7 +66,7 @@ const VendorRegister = () =>{
         <div className="form-container">
             <h2>Vendor Registration</h2>
             {Object.keys(formData).map((field) =>(
-                <diV className="form-group" key={field}>
+                <div className="form-group" key={field}>
                      <label>{field.replace(/([A-Z])/g,"$1")}</label>
                      <input
                      type={field === "password" ? "password" : "text"}
@@ -76,7 +76,7 @@ const VendorRegister = () =>{
                      className="form-control"
                      />
                      
-                </diV>
+                </div>
             ))}
           <button onClick={handleRegister} className="btn btn-success">Register</button>
         </div>

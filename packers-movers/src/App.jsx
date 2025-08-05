@@ -5,7 +5,7 @@ import './App.css';
 
 // General Pages
 import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/RegisterPage";
+import ContactPage from "./pages/ContactPage";
 import RegisterPage from "./pages/Register";
 import LoginPage from "./pages/Login";
 import VendorRegister from "./pages/Vregister";

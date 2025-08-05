@@ -1,6 +1,6 @@
 import AOS from "aos";
 
-import ContactUsBannerImg from "../images/contact.jpg";
+import ContactUsBannerImg from "../assets/contact.jpg";
 
 import "aos/dist/aos.css";
 AOS.init();
