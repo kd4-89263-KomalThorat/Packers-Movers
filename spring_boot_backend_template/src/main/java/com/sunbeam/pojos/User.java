@@ -1,56 +1,46 @@
 package com.sunbeam.pojos;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
-
 
 @Entity
-@Table(name = "users")
+@Table(name = "users") // to specify name of the table
 @NoArgsConstructor
 @Getter
 @Setter
 public class User extends BaseEntity {
+
 	@Column(name = "full_name", length = 100) 
 	private String fullName;
 	
-	@Column(length = 50, unique = true) 
+	@Column(length = 50, unique = true) // adds unique constraint
 	private String email;
 	
-	@Column(length = 20, nullable = false) 
+	@Column(length = 20, nullable = false) // not null constraint
 	private String password;
 	
-	@Column(length = 15, nullable = false) 
+	@Column(length = 15, nullable = false) // not null constraint
 	private String phone;
 	
-	@Column(length = 100, nullable = false) 
+	@Column(length = 100, nullable = false) // not null constraint
 	private String address;
 	
-	@Column(length = 80, nullable = false) 
+	@Column(length = 80, nullable = false) // not null constraint
 	private String city;
 	
 	@Enumerated(EnumType.STRING) 
 	@Column(length = 30) 
-    private UserRole role;
+	private UserRole role;
 	
 	@Column(name="delete_status")
 	boolean deleteStatus;
-	
 
 }
