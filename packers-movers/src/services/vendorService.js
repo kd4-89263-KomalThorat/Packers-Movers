@@ -1,12 +1,12 @@
- import axios from "axios";
+import axios from "axios";
 import { createUrl } from "../utils";
 
 
-const config = "http://localhost:8080";
+//const config = "http://localhost:8080";
 
 export async function registerVendor(vendorData) {
   try {
-    const url = createUrl("Vendor");
+    const url = createUrl("Vendor/register");
     const response = await axios.post(url, vendorData, {
       headers: { "Content-Type": "application/json" },
     });
@@ -36,7 +36,8 @@ export async function registerVendor(vendorData) {
 export async function vendorSignin(email, password) {
   try {
     const body = { email, password };
-    const url = createUrl(`${config}/Vendor/signin`);
+    // const url = createUrl(`${config}/vendor/signin`);
+    const url = createUrl(`/vendor/signin`);
     const response = await axios.post(url, body);
     return response.data;
   } catch (ex) {

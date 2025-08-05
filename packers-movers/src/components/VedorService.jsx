@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/vendor.css";
+
 function Vendor() {
   const [features, setFeatures] = useState([
     "Packing and Unpacking",
