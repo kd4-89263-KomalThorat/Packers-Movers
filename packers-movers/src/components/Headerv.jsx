@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../assets/WhatsApp Image 2024-12-25 at 10.18.46 PM.jpeg";
+import Logo from "../assets/trucklogo.jpg";
 import "../App.css";
 // import Logo from "../assets/navbarlogo.jpg";
 function Headerv() {
@@ -52,7 +52,7 @@ function Headerv() {
               <Link to="/main-vendor-service">Shifting</Link>
             </li>
             <li className="nav_link">
-              <Link to="/vendor-Service-request">Service Request</Link>
+              <Link to="/vendor-service-requests">Service Request</Link>
             </li>
             <li className="nav_link">
               <button onClick={handleLogout}>Logout</button>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { config } from "../Services/config";
+import { config } from "../services/config";
 
 const VerifyPayment = () => {
   const [paymentId, setPaymentId] = useState("");

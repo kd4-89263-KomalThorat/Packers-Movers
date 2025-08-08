@@ -2,11 +2,15 @@
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
+  background-color: #e8edf0; /* Light grayish blue */
+  border-radius: 12px;
 }
 
 .content_heading {
   text-align: center;
   margin-bottom: 2rem;
+  color: #2c3e50; /* Dark blue-gray */
+  font-weight: bold;
 }
 
 .mission_content {
@@ -20,12 +24,18 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(117, 112, 112, 0.1);
 }
 
 .mission_img {
   flex: 1;
   min-width: 300px;
+  border-color: #0c0b0b;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(117, 112, 112, 0.1);
+  border: 2px solid #e1e8ed; /* Light border */
 }
 
 .mission_text {
@@ -33,4 +43,6 @@
   min-width: 300px;
   font-size: 1rem;
   line-height: 1.7;
+  line-height: 1.7;
+  color: #0c0b0b; 
 }

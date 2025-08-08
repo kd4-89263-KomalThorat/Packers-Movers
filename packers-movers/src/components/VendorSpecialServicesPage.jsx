@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { config } from "../Services/config";
+import { config } from "../services/config";
 import { toast } from "react-toastify";
 import "../styles/cards.css";
 
@@ -37,9 +37,9 @@ const VendorSpecialServicesPage = () => {
 
   const handleDelete = async (serviceName) => {
     try {
-      await axios.delete(`${config.serverUrl}/VendorServices/delete`, {
-        data: { vendorid: vendorId, servicesName: serviceName },
-      });
+      await axios.delete(
+        `${config.serverUrl}/VendorServices/delete/${vendorId}/${serviceName}`
+      );
       setServices((prevServices) =>
         prevServices.filter((service) => service.servicesName !== serviceName)
       );
@@ -56,7 +56,8 @@ const VendorSpecialServicesPage = () => {
       <div className="services-grid">
         {services.length > 0 ? (
           services.map((service) => (
-            <div key={service.servicesName} className="service-card small-card">
+            //  <div key={service.servicesName} className="service-card small-card">
+            <div key={service.id} className="service-card small-card">
               <h3>{service.servicesName}</h3>
               <p>
                 <strong>Price:</strong> ₹{service.price}

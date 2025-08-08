@@ -22,7 +22,7 @@ const ComparisonPage = () => {
         const [servicesData, vendorsData, vendorServicesData] =
           await Promise.all([
             axios.get(`${config.serverUrl}/service/Get`),
-            axios.get(`${config.serverUrl}/Vendor/getAll`),
+            axios.get(`${config.serverUrl}/vendor/getAll`),
             axios.get(`${config.serverUrl}/VendorServices/getAll`),
           ]);
 
@@ -96,7 +96,7 @@ const ComparisonPage = () => {
         <p>Loading data...</p>
       )}
 
-      <div className="pagination">
+      {/* <div className="pagination">
         {Array.from(
           { length: Math.ceil(vendors.length / ITEMS_PER_PAGE) },
           (_, idx) => (
@@ -109,7 +109,7 @@ const ComparisonPage = () => {
             </button>
           )
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

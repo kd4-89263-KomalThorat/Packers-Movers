@@ -1,12 +1,10 @@
 import axios from "axios";
 import { createUrl } from "../utils";
-import { config } from '../Services/config';
-
-// const config = "http://localhost:8080";
+// import { config } from '../services/config';
 
 export async function createUser(userData) {
   try {
-    const url = createUrl(`/users/signup`);
+    const url = createUrl("users/signup");
     const response = await axios.post(url, userData, {
       headers: { "Content-Type": "application/json" },
     });
@@ -24,16 +22,13 @@ export async function createUser(userData) {
 
 export async function signin(email, password) {
   try {
-    const body = { email, password };
-    // const url = createUrl(`${config}/users/signin`);
-    const response = await axios.post(`${config}/users/signin`, body);
+    const url = createUrl("users/signin");
+    const response = await axios.post(url, { email, password });
     return response.data;
   } catch (ex) {
     return {
       status: "error",
-      error: ex.response ? ex.response.data.message : ex.message,
+      error: ex.response?.data?.message || ex.message,
     };
   }
 }
-
-

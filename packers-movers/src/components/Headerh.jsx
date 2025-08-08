@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/WhatsApp Image 2024-12-25 at 10.18.46 PM.jpeg";
+import Logo from "../assets/trucklogo.jpg"
 import "../App.css";
 
 function Headerh(){

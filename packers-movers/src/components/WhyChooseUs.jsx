@@ -1,4 +1,4 @@
-import OurPurposeImg from "../assets/download.jpg";
+import OurPurposeImg from "../assets/tempo.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

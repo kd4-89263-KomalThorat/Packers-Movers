@@ -1,12 +1,10 @@
 import axios from "axios";
 import { createUrl } from "../utils";
-
-
-//const config = "http://localhost:8080";
+// import {config} from "../services/config"
 
 export async function registerVendor(vendorData) {
   try {
-    const url = createUrl("Vendor/register");
+    const url = createUrl("vendor/register");
     const response = await axios.post(url, vendorData, {
       headers: { "Content-Type": "application/json" },
     });
@@ -33,17 +31,17 @@ export async function registerVendor(vendorData) {
     };
   }
 }
+
 export async function vendorSignin(email, password) {
   try {
-    const body = { email, password };
-    // const url = createUrl(`${config}/vendor/signin`);
-    const url = createUrl(`/vendor/signin`);
-    const response = await axios.post(url, body);
+    const url = createUrl("vendor/signin");
+    console.log("API URL: ",url);
+    const response = await axios.post(url, { email, password });
     return response.data;
   } catch (ex) {
     return {
       status: "error",
-      error: ex.response ? ex.response.data.message : ex.message,
+      error: ex.response?.data?.message || ex.message,
     };
   }
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { config } from "../Services/config";
+import { config } from "../services/config";
 import "../styles/form.css";
 
 function AddServicePage() {

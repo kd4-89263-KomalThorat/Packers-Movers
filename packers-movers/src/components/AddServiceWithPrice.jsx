@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { config } from "../Services/config";
+import { config } from "../services/config";
 function VendorServicePage() {
   const [services, setServices] = useState([]);
   const [selectedService, setSelectedService] = useState("");

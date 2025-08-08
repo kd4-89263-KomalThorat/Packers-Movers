@@ -54,7 +54,7 @@ export default function ContactInfo() {
           </p>
 
           <p>
-            <i className="ri-phone-fill"></i> +91 9970792572
+            <i className="ri-phone-fill"></i> +91 9356880893
           </p>
 
           <p>

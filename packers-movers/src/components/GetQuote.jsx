@@ -1,32 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { config } from "../Services/config";
+import { config } from "../services/config";
 import { useNavigate } from "react-router-dom";
 
 const GetQuote = () => {
   const navigate = useNavigate();
   const districtsOfMaharashtra = [
-    "Mumbai",
-    "Pune",
-    "Nagpur",
-    "Thane",
-    "Nashik",
-    "Aurangabad",
-    "Solapur",
-    "Amravati",
-    "Kolhapur",
-    "Jalgaon",
-    "Akola",
-    "Latur",
-    "Dhule",
-    "Chandrapur",
-    "Parbhani",
-    "Beed",
-    "Nanded",
-    "Satara",
-    "Ahmednagar",
-    "Yavatmal",
-    "Karad",
+    "Mumbai", "Pune", "Nagpur", "Thane", "Nashik", "Aurangabad",
+    "Solapur", "Amravati", "Kolhapur", "Jalgaon", "Akola", "Latur",
+    "Dhule", "Chandrapur", "Parbhani", "Beed", "Nanded", "Satara",
+    "Ahmednagar", "Yavatmal", "Karad"
   ];
 
   const [formData, setFormData] = useState({
@@ -45,7 +28,12 @@ const GetQuote = () => {
     const fetchShiftingTypes = async () => {
       try {
         const response = await axios.get(`${config.serverUrl}/Shifting/GetAll`);
-        setShiftingTypes(response.data);
+        const data = response.data.data || response.data; // Support both structures
+        if (Array.isArray(data)) {
+          setShiftingTypes(data);
+        } else {
+          console.error("Shifting types data is not an array:", data);
+        }
       } catch (error) {
         console.error("Error fetching shifting types:", error);
       }
@@ -60,8 +48,7 @@ const GetQuote = () => {
     if (!formData.dropoffLocation)
       formErrors.dropoffLocation = "Dropoff location is required";
     if (formData.pickupLocation === formData.dropoffLocation)
-      formErrors.dropoffLocation =
-        "Pickup and Dropoff locations cannot be the same";
+      formErrors.dropoffLocation = "Pickup and Dropoff locations cannot be the same";
     if (!formData.preferredDate)
       formErrors.preferredDate = "Preferred date is required";
     if (!formData.shipmentWeight)
@@ -162,11 +149,12 @@ const GetQuote = () => {
             onChange={handleChange}
           >
             <option value="">Select Shifting Type</option>
-            {shiftingTypes.map((type) => (
-              <option key={type.id} value={type.id}>
-                {type.shiftingTypeName}
-              </option>
-            ))}
+            {Array.isArray(shiftingTypes) &&
+              shiftingTypes.map((type) => (
+                <option key={type.id} value={type.id}>
+                  {type.shiftingTypeName || type.name}
+                </option>
+              ))}
           </select>
           {errors.shiftingId && (
             <span className="error">{errors.shiftingId}</span>

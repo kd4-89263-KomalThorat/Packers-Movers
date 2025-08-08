@@ -1,4 +1,4 @@
-.container {
+/* .container {
   padding: 15px;
   font-family: Arial, sans-serif;
   margin: 0 auto;
@@ -117,4 +117,129 @@ h1 {
 .pagination button:hover {
   background-color: #d85f2c;
   color: white;
+} */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.table {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.services-column {
+  flex: 1;
+  min-width: 180px;
+  background-color: #fafafa;
+  border-right: 2px solid #e5e5e5;
+  padding-right: 1rem;
+}
+
+.services-column h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.service-item {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.vendor-column {
+  flex: 1;
+  min-width: 180px;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.vendor-column h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.vendor-column .service-item {
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.vendor-column .yes {
+  background-color: #d1f7d1;
+  color: #2e7d32;
+}
+
+.vendor-column .no {
+  background-color: #ffd6d6;
+  color: #c62828;
+}
+
+.confirm-btn {
+  background-color: #50524b;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm-btn:hover {
+  background-color: #001dd8;
+}
+
+/* Pagination styling */
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination button {
+  background-color: #0c78f3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.pagination button:hover,
+.pagination button.active {
+  background-color: #00d1d8;
 }

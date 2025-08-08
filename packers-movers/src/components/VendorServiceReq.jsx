@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { config } from "../Services/config";
+import { config } from "../services/config";
 import "../styles/table.css";
 
 const VendorServiceRequests = () => {
@@ -19,11 +19,30 @@ const VendorServiceRequests = () => {
       setVendorName(vendorName);
     }
 
+    // axios
+    //   .get(`${config.serverUrl}/service-requests/getByid/${vendorId}`)
+    //   .then((res) => setServiceRequests(res.data))
+    //   .catch(() => toast.error("Failed to load service requests."))
+    //   .finally(() => setLoading(false));
     axios
-      .get(`${config.serverUrl}/service-requests/getByid/${vendorId}`)
-      .then((res) => setServiceRequests(res.data))
-      .catch(() => toast.error("Failed to load service requests."))
-      .finally(() => setLoading(false));
+  .get(`${config.serverUrl}/service-requests/getByid/${vendorId}`)
+  .then((res) => {
+    console.log("API response:", res.data);
+    const data = res.data;
+
+    // ✅ Safe: Ensure it's always an array
+    if (Array.isArray(data)) {
+      setServiceRequests(data);
+    } else if (Array.isArray(data.data)) {
+      setServiceRequests(data.data);
+    } else {
+      setServiceRequests([]); // fallback to empty
+      toast.error("Unexpected response format from server.");
+    }
+  })
+  .catch(() => toast.error("Failed to load service requests."))
+  .finally(() => setLoading(false));
+
   }, [vendorId]);
 
   const updateStatus = (id) => {
