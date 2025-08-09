@@ -1,0 +1,38 @@
+package com.sunbeam.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.AuthRequest;
+import com.sunbeam.dto.UserReqDTO;
+import com.sunbeam.service.UserService;
+
+public class UserController {
+	
+	@Autowired
+	UserService userService;
+	 
+		@PostMapping("/signup")
+		public String userSignIn(@RequestBody UserReqDTO user)
+		{
+			return userService.signUp(user);
+		}
+		
+		@PostMapping("/signin")
+		public ResponseEntity<?> userSignIn(@RequestBody AuthRequest dto)
+		{
+			System.out.println("in user sign in "+dto);
+			try {
+				return ResponseEntity.ok(userService.SignIn(dto));
+			} catch (RuntimeException e) {
+				//SC 401 , err mesg
+				return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+						.body(new ApiResponse(e.getMessage()));
+			}
+		}
+
+}
