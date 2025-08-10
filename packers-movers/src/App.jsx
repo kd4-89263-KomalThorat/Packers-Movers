@@ -27,10 +27,10 @@ import VendorSpecialService from "./pages/VendorSpecialServicesPage";
 import AddSpecialService from "./pages/AddSpecialService";
 import EditSpecialService from "./pages/EditSpecialServicePage";
 import VendorServiceReq from "./pages/VendorServiceRequ";
-// import InvoicePage from "./pages/Invoice";
-// import Payment from "./pages/Payment";
-// import Verify from "./pages/VerifyPayment";
-// import PaymentSucess from "./pages/PaymentSucess";
+import InvoicePage from "./pages/Invoice";
+import Payment from "./pages/Payment";
+import Verify from "./pages/VerifyPayment";
+import PaymentSucess from "./pages/PaymentSuccess";
 
 function App() {
   return (
@@ -69,10 +69,11 @@ function App() {
         <Route path="/vendor-service-requests" element={<VendorServiceReq />} />
 
         {/* Payment Routes */}
-        {/* <Route path="/invoice/:id" element={<InvoicePage />} />
+        {/* <Route path="/invoice/:id" element={<InvoicePage />} /> */}
+        <Route path="/invoice" element={<InvoicePage />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/verify-payment" element={<Verify />} />
-        <Route path="/payment-success" element={<PaymentSucess />} /> */}
+        <Route path="/payment-success" element={<PaymentSucess />} />
       </Routes>
 
       <ToastContainer
