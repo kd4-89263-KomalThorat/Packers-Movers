@@ -85,15 +85,14 @@ public class VendorServicesServiceImpl<VendorsServiceResDTO> implements VendorSe
 	@Override
 	public List<VendorServiceResDTO> getAllServicesByVendorID(Long id) {
 		List<VendorServices> services = vendorServiceDao.findByVendorIdWithServices(id);
-		
-		return services.stream().map(service -> {
-			VendorsServiceResDTO dto = new VendorsServiceResDTO();
-			dto.setVendorid(service.getVendor().getId());
-			 dto.setServicesName(service.getServices().getServiceName()); 
-		        dto.setPrice(service.getPrice()); 
-		        return dto;
-		    }).collect(Collectors.toList());
 			
+		return services.stream().map(service -> {
+			VendorServiceResDTO dto = new VendorServiceResDTO();
+			dto.setVendorid(service.getVendor().getId());
+			dto.setServicesName(service.getServices().getServiceName());
+			dto.setPrice(service.getPrice());
+			return dto;
+		}).collect(Collectors.toList());
 		
 			}
 
