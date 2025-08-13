@@ -9,11 +9,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.razorpay.Order;
 import com.razorpay.RazorpayClient;
+import com.razorpay.RazorpayException;
 import com.sunbeam.dao.PaymentOrderDao;
 import com.sunbeam.dao.UserDao;
+import com.sunbeam.dao.VendorDao;
 import com.sunbeam.dto.PaymentOrderDto;
 import com.sunbeam.pojos.PaymentOrder;
 import com.sunbeam.pojos.User;
+import com.sunbeam.pojos.Vendor;
 
 public class PaymentServiceImpl implements PaymentService {
 	@Autowired
@@ -63,7 +66,7 @@ public class PaymentServiceImpl implements PaymentService {
 		paymentOrder.setAmount(amount);
 		paymentOrder.setStatus("Pending");
 		
-		paymentOrder = PaymentOrderDao.save(paymentOrder);
+		paymentOrder = paymentOrderDao.save(paymentOrder);
 		
 		 return new PaymentOrderDto(paymentOrder);
 		//return modelMapper.map(paymentOrder,PaymentOrderDto.class);

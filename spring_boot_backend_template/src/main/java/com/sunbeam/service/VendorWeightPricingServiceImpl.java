@@ -34,7 +34,7 @@ public class VendorWeightPricingServiceImpl implements VendorWeightPricingServic
 
 	@Override
 	public ApiResponse savePricing(VendorWeightPricingDTO pricing) {
-		 Vendor vendor = venderDao.findById(pricing.getVendor())
+		 Vendor vendor = vendorDao.findById(pricing.getVendor())
 	    	        .orElseThrow(() -> new RuntimeException("Vendor not found with ID: " + pricing.getVendor()));
 	    	    
 	    	    ShiftingType shiftingType = shiftingTypeDao.findById(pricing.getShiftingType())

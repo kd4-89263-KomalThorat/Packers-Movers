@@ -1,5 +1,6 @@
 package com.sunbeam.service;
 
+import com.razorpay.RazorpayException;
 import com.sunbeam.dto.PaymentOrderDto;
 
 public interface PaymentService {

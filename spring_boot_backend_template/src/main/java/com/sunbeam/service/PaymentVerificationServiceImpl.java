@@ -7,13 +7,16 @@ import org.springframework.beans.factory.annotation.Value;
 
 import com.razorpay.Payment;
 import com.razorpay.RazorpayClient;
+import com.razorpay.RazorpayException;
 import com.sunbeam.dao.PaymentOrderDao;
 import com.sunbeam.dao.PaymentVerificationDao;
 import com.sunbeam.dao.UserDao;
+import com.sunbeam.dao.VendorDao;
 import com.sunbeam.dto.PaymentVerificationDto;
 import com.sunbeam.pojos.PaymentOrder;
 import com.sunbeam.pojos.PaymentVerification;
 import com.sunbeam.pojos.User;
+import com.sunbeam.pojos.Vendor;
 
 public class PaymentVerificationServiceImpl {
 
@@ -35,7 +38,7 @@ public class PaymentVerificationServiceImpl {
     @Value("${razorpay.key_secret}")
     private String razorPaySecretId;
 
-	@Override
+//	@Override
 	public PaymentVerificationDto verifyPayment(String paymentId) throws RazorpayException {
 		 RazorpayClient razorpay = new RazorpayClient(razorPayKeyId, razorPaySecretId);
 
