@@ -1,10 +1,10 @@
-package com.packersandmovers.dao;
+package com.sunbeam.dao;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.packersandmovers.pojos.ServiceRequest;
+import com.sunbeam.pojos.ServiceRequest;
 
 public interface ServiceRequestDao extends JpaRepository<ServiceRequest, Long>   {
 

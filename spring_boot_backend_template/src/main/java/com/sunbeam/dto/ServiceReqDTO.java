@@ -1,4 +1,4 @@
-package com.packersandmovers.dto;
+package com.sunbeam.dto;
 
 import jakarta.persistence.Column;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.packersandmovers.pojos;
+package com.sunbeam.pojos;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,12 +1,12 @@
-package com.packersandmovers.dto;
+package com.sunbeam.dto;
 
 
 import lombok.*;
 import java.util.Date;
 import java.util.List;
 
-import com.packersandmovers.pojos.PaymentStatus;
-import com.packersandmovers.pojos.RequestStatus;
+import com.sunbeam.pojos.PaymentStatus;
+import com.sunbeam.pojos.RequestStatus;
 
 @Setter
 @Getter

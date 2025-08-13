@@ -1,4 +1,4 @@
-package com.packersandmovers.controller;
+package com.sunbeam.controller;
 
 import java.util.List;
 
@@ -12,13 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.packersandmovers.dto.ServiceReqDTO;
-import com.packersandmovers.dto.ServiceResDTO;
-import com.packersandmovers.dto.VendorReqDTO;
-import com.packersandmovers.service.ServicesService;
-import com.packersandmovers.service.VendorService;
-
 
 @RestController
 @RequestMapping("/service")

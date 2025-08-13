@@ -1,4 +1,4 @@
-package com.packersandmovers.service;
+package com.sunbeam.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,14 +7,14 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.packersandmovers.dao.ServicesDao;
-import com.packersandmovers.dto.ApiResponse;
-import com.packersandmovers.dto.ServiceReqDTO;
-import com.packersandmovers.dto.ServiceResDTO;
-import com.packersandmovers.pojos.Services;
-import com.packersandmovers.pojos.User;
-import com.packersandmovers.pojos.UserRole;
-import com.packersandmovers.pojos.Vendor;
+import com.sunbeam.dao.ServicesDao;
+import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.ServiceReqDTO;
+import com.sunbeam.dto.ServiceResDTO;
+import com.sunbeam.pojos.Services;
+import com.sunbeam.pojos.User;
+import com.sunbeam.pojos.UserRole;
+import com.sunbeam.pojos.Vendor;
 
 import jakarta.transaction.Transactional;
 

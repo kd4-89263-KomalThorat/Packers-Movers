@@ -1,4 +1,4 @@
-package com.packersandmovers.service;
+package com.sunbeam.service;
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -11,12 +11,12 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.packersandmovers.dao.*;
-import com.packersandmovers.dto.ApiResponse;
-import com.packersandmovers.dto.ServiceRequestDTO;
-import com.packersandmovers.dto.ServiceRequestResDTO;
-import com.packersandmovers.dto.ServiceRequestResUserDTO;
-import com.packersandmovers.pojos.*;
+import com.sunbeam.dao.*;
+import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.ServiceRequestDTO;
+import com.sunbeam.dto.ServiceRequestResDTO;
+import com.sunbeam.dto.ServiceRequestResUserDTO;
+import com.sunbeam.pojos.*;
 
 import jakarta.transaction.Transactional;
 

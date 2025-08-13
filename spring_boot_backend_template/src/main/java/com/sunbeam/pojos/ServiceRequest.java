@@ -1,4 +1,4 @@
-package com.packersandmovers.pojos;
+package com.sunbeam.pojos;
 
 import java.time.LocalDate;
 import java.math.BigDecimal;

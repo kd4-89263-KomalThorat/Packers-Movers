@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import "../styles/cards.css";
 import "../styles/form.css";
 import "../styles/editForm.css";
-// import VerifyPayment from "../pages/VerifyPayment";
+import VerifyPayment from "../components/VerifyPayment";
 
 export default function Verify() {
   return (

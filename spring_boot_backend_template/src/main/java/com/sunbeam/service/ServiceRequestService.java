@@ -1,12 +1,12 @@
-package com.packersandmovers.service;
+package com.sunbeam.service;
 
 import java.util.List;
 
-import com.packersandmovers.dto.ApiResponse;
-import com.packersandmovers.dto.ServiceRequestDTO;
-import com.packersandmovers.dto.ServiceRequestResDTO;
-import com.packersandmovers.dto.ServiceRequestResUserDTO;
-import com.packersandmovers.pojos.RequestStatus;
+import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.ServiceRequestDTO;
+import com.sunbeam.dto.ServiceRequestResDTO;
+import com.sunbeam.dto.ServiceRequestResUserDTO;
+import com.sunbeam.pojos.RequestStatus;
 
 public interface ServiceRequestService {
 

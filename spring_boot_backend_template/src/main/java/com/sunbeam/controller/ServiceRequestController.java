@@ -1,4 +1,4 @@
-package com.packersandmovers.controller;
+package com.sunbeam.controller;
 
 import java.util.List;
 
@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.packersandmovers.dto.ApiResponse;
-import com.packersandmovers.dto.ServiceRequestDTO;
-import com.packersandmovers.dto.ServiceRequestResDTO;
-import com.packersandmovers.dto.ServiceRequestResUserDTO;
-import com.packersandmovers.pojos.RequestStatus;
-import com.packersandmovers.service.ServiceRequestService;
+import com.sunbeam.dto.ApiResponse;
+import com.sunbeam.dto.ServiceRequestDTO;
+import com.sunbeam.dto.ServiceRequestResDTO;
+import com.sunbeam.dto.ServiceRequestResUserDTO;
+import com.sunbeam.pojos.RequestStatus;
+import com.sunbeam.service.ServiceRequestService;
 
 @RestController
 @RequestMapping("/service-requests")
