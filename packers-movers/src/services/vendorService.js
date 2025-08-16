@@ -1,11 +1,11 @@
-import axios from "axios";
+// import axios from "axios";
 import { createUrl } from "../utils";
-// import {config} from "../services/config"
+import {config} from "../services/config"
 
 export async function registerVendor(vendorData) {
   try {
     const url = createUrl("vendor/register");
-    const response = await axios.post(url, vendorData, {
+    const response = await config.api.post(url, vendorData, {
       headers: { "Content-Type": "application/json" },
     });
 
@@ -36,7 +36,13 @@ export async function vendorSignin(email, password) {
   try {
     const url = createUrl("vendor/signin");
     console.log("API URL: ",url);
-    const response = await axios.post(url, { email, password });
+    const response = await config.api.post(url, { email, password });
+
+    //saving token for future requests
+    if (response.data?.token) {
+      localStorage.setItem("token", response.data.token);
+    }
+
     return response.data;
   } catch (ex) {
     return {

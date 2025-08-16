@@ -1,5 +1,4 @@
 package com.sunbeam.controller;
-package com.packersandmovers.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,24 +11,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.packersandmovers.dto.ApiResponse;
-import com.packersandmovers.dto.AuthRequest;
-import com.packersandmovers.dto.VendorReqDTO;
-import com.packersandmovers.service.VendorService;
-import com.sunbeam.pojos.VendorServices;
 
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+import com.sunbeam.dto.*;
+import com.sunbeam.service.VendorService;
 
 @RestController
 @RequestMapping("/Vendor")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 
 public class VendorController 
 {
 	@Autowired
-	private VendorServices vendorService;
+	private VendorService vendorService;
 	
 	public VendorController()
 	{

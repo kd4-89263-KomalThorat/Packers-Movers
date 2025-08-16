@@ -39,6 +39,9 @@ public class VendorResDTO
 	
 	private String address;
 	
+
+	private String token;
+	
 	
 //	private float rating;
 	

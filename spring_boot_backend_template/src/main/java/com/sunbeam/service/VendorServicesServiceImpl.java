@@ -32,7 +32,7 @@ import lombok.Setter;
 
 @Service
 @Transactional
-public class VendorServicesServiceImpl<VendorsServiceResDTO> implements VendorServicesService 
+public class VendorServicesServiceImpl implements VendorServicesService 
 {
 
     private final ServiceRequestServiceImpl serviceRequestServiceImpl;

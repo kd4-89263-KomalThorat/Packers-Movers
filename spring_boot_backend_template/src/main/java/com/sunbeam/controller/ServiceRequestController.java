@@ -23,7 +23,7 @@ import com.sunbeam.service.ServiceRequestService;
 
 @RestController
 @RequestMapping("/service-requests")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 
 public class ServiceRequestController 
 {

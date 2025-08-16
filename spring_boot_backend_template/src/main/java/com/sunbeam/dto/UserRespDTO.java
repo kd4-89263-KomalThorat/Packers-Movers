@@ -21,5 +21,7 @@ public class UserRespDTO extends BaseDTO{
 	
 	private UserRole role;
 	
+	private String token;
+	
 	boolean deleteStatus;
 }

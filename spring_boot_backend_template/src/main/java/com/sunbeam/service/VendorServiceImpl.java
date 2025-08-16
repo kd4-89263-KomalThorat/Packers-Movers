@@ -15,6 +15,7 @@ import com.sunbeam.dto.VendorReqDTO;
 import com.sunbeam.dto.VendorResDTO;
 import com.sunbeam.pojos.UserRole;
 import com.sunbeam.pojos.Vendor;
+import com.sunbeam.security.JwtUtil;
 
 import jakarta.transaction.Transactional;
 
@@ -33,6 +34,9 @@ public class VendorServiceImpl implements VendorService
 	
 	@Autowired
 	private ModelMapper modelMapper;
+	
+	@Autowired
+	private JwtUtil jwtUtil;
 
 	@Override
 	public ApiResponse signIn(VendorReqDTO dto) {
@@ -50,9 +54,14 @@ public class VendorServiceImpl implements VendorService
 
 	@Override
 	public VendorResDTO signIn(AuthRequest dto) {
-		Vendor VendorEntity = vendorDao.findByEmailAndPassword(dto.getEmail(), dto.getPassword()).orElseThrow(() ->new ApiException("Invalid Email or password !!!!!"));
-		 return modelMapper.map(VendorEntity, VendorResDTO.class);
+		Vendor vendorEntity = vendorDao.findByEmailAndPassword(dto.getEmail(), dto.getPassword()).orElseThrow(() ->new ApiException("Invalid Email or password !!!!!"));
+//		 return modelMapper.map(VendorEntity, VendorResDTO.class);
 
+		 String token = jwtUtil.generateToken(vendorEntity.getEmail(), vendorEntity.getUserRole().name());
+
+		    VendorResDTO response = modelMapper.map(vendorEntity, VendorResDTO.class);
+		    response.setToken(token);  // <-- add a `token` field in VendorResDTO
+		    return response;
 	}
 	
 
