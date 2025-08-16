@@ -54,7 +54,7 @@ const PaymentComponent = ({ userId, vendorId, totalPrice }) => {
       const { razorpayOrderId, amount, currency } = response.data;
 
       const options = {
-        key: "rzp_test_388JpWc9Xuqwan",
+        key: "rzp_test_6mksRbtiWF5CWZ",
         amount: amount ,
         currency: currency,
         name: "Packers & Movers",

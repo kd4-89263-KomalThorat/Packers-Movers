@@ -17,13 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sunbeam.dto.ApiResponse;
 import com.sunbeam.dto.VendorServiceDTO;
+import com.sunbeam.dto.VendorServiceResDTO;
 import com.sunbeam.service.VendorServicesService;
 
 
 
 @RestController
 @RequestMapping("/VendorServices")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class VendorServicesController 
 {
 	@Autowired
@@ -54,13 +55,13 @@ public class VendorServicesController
 	}
 	
 	@PutMapping("/update-price")
-    public ResponseEntity<ApiResponse> updatePrice(@RequestBody VendorsServiceResDTO dto) {
+    public ResponseEntity<ApiResponse> updatePrice(@RequestBody VendorServiceResDTO dto) {
         ApiResponse response = vendorServicesService.updatePrice(dto);
         return ResponseEntity.ok(response);
     }
  
  @DeleteMapping("/delete")
-    public ResponseEntity<ApiResponse> deleteVendorService(@RequestBody VendorsServiceResDTO dto) {
+    public ResponseEntity<ApiResponse> deleteVendorService(@RequestBody VendorServiceResDTO dto) {
         ApiResponse response = vendorServicesService.deleteVendorService(dto);
         return ResponseEntity.ok(response);
     }

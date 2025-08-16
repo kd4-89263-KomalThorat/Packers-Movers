@@ -27,7 +27,12 @@ const GetQuote = () => {
   useEffect(() => {
     const fetchShiftingTypes = async () => {
       try {
-        const response = await axios.get(`${config.serverUrl}/Shifting/GetAll`);
+        const token = localStorage.getItem("token");
+        const response = await config.api.get(`${config.serverUrl}/Shifting/GetAll`,{
+          headers:{
+            Authorization: `Bearer ${token}`,
+          },
+        });
         const data = response.data.data || response.data; // Support both structures
         if (Array.isArray(data)) {
           setShiftingTypes(data);

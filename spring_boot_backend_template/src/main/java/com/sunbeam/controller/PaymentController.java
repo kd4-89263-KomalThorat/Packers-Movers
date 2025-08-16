@@ -21,7 +21,7 @@ import com.razorpay.RazorpayException;
 
 @RestController
 @RequestMapping("/payments")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class PaymentController {
 
 	@Autowired

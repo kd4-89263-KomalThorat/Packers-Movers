@@ -13,9 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sunbeam.dto.ServiceReqDTO;
+import com.sunbeam.dto.ServiceResDTO;
+import com.sunbeam.service.ServicesService;
+
 @RestController
 @RequestMapping("/service")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 
 public class ServicesController 
 {

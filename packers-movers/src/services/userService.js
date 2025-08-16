@@ -1,11 +1,12 @@
-import axios from "axios";
+// import axios from "axios";
 import { createUrl } from "../utils";
+import { config } from "./config";
 // import { config } from '../services/config';
 
 export async function createUser(userData) {
   try {
     const url = createUrl("users/signup");
-    const response = await axios.post(url, userData, {
+    const response = await config.api.post(url, userData, {
       headers: { "Content-Type": "application/json" },
     });
 
@@ -23,7 +24,13 @@ export async function createUser(userData) {
 export async function signin(email, password) {
   try {
     const url = createUrl("users/signin");
-    const response = await axios.post(url, { email, password });
+    const response = await config.api.post(url, { email, password });
+
+    //save token for future requests
+    if (response.data?.token) {
+      localStorage.setItem("token", response.data.token);
+    }
+
     return response.data;
   } catch (ex) {
     return {
